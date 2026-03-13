@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>610</width>
+    <height>667</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Nunito</family>
+    <italic>false</italic>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Phone Management System</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #eaf3ff;
+}
+
+QGroupBox {
+    border: 2px solid #3b82f6;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+QGroupBox:title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px 0 5px;
+}
+
+QLabel {
+    font-size: 14px;
+    color: #1e3a8a;
+}
+
+QLineEdit {
+    border: 2px solid #60a5fa;
+    border-radius: 6px;
+    padding: 5px;
+    background-color: white;
+}
+
+QLineEdit:focus {
+    border: 2px solid #2563eb;
+}
+
+QPushButton {
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 8px;
+    padding: 6px;
+    font-size: 13px;
+}
+
+QPushButton:hover {
+    background-color: #2563eb;
+}
+
+QPushButton:pressed {
+    background-color: #1d4ed8;
+}
+
+QTableWidget {
+    background-color: white;
+    border: 1px solid #93c5fd;
+    gridline-color: #bfdbfe;
+}
+
+QHeaderView::section {
+    background-color: #3b82f6;
+    color: white;
+    padding: 5px;
+    border: none;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tb_phone">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>380</y>
+      <width>601</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nunito</family>
+     </font>
+    </property>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>#</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Brand</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Model</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Price</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>RAM</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Storage</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="btn_add">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>340</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nunito</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>เพิ่มข้อมูล</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/add (1).png</normaloff>../../Downloads/add (1).png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_update">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>340</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nunito</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>อัปเดต</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/edit.png</normaloff>../../Downloads/edit.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_clear">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>340</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nunito</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>เคลียร์</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/broom.png</normaloff>../../Downloads/broom.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_delete">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>340</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nunito</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>ลบข้อมูล</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../Downloads/delete (1).png</normaloff>../../Downloads/delete (1).png</iconset>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>601</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nunito</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(220,220,220);</string>
+    </property>
+    <property name="title">
+     <string>Search Phone</string>
+    </property>
+    <widget class="QPushButton" name="btn_search">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>20</y>
+       <width>100</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Nunito</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(49, 122, 226);</string>
+     </property>
+     <property name="text">
+      <string>ค้นหา</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../Downloads/loupe.png</normaloff>../../Downloads/loupe.png</iconset>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txt_search">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>20</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Nunito</family>
+      </font>
+     </property>
+     <property name="placeholderText">
+      <string>พิมพ์ข้อความ</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>601</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nunito</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string> Phone Details</string>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>30</y>
+       <width>82</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="txt_brand2">
+        <property name="font">
+         <font>
+          <family>Nunito</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>ยี่ห้อ</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="txt_model2">
+        <property name="font">
+         <font>
+          <family>Nunito</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>รุ่น</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="txt_price2">
+        <property name="font">
+         <font>
+          <family>Nunito</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>ราคา</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="txt_ram2">
+        <property name="font">
+         <font>
+          <family>Nunito</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>หน่วยความจำ</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="txt_storage2">
+        <property name="font">
+         <font>
+          <family>Nunito</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>หน่วยความจุ</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>30</y>
+       <width>171</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLineEdit" name="txt_brand">
+        <property name="font">
+         <font>
+          <family>Nunito</family>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="txt_model">
+        <property name="font">
+         <font>
+          <family>Nunito</family>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="txt_price">
+        <property name="font">
+         <font>
+          <family>Nunito</family>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="txt_ram">
+        <property name="font">
+         <font>
+          <family>Nunito</family>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="txt_storage">
+        <property name="font">
+         <font>
+          <family>Nunito</family>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>610</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
