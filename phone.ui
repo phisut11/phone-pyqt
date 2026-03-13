@@ -21,66 +21,86 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow {
-    background-color: #eaf3ff;
+    background-color: #eef4ff;
 }
 
+/* กล่อง */
 QGroupBox {
     border: 2px solid #3b82f6;
-    border-radius: 10px;
-    margin-top: 10px;
+    border-radius: 12px;
+    margin-top: 12px;
     font-size: 14px;
     font-weight: bold;
     color: #1e3a8a;
 }
 
-QGroupBox:title {
+QGroupBox::title {
     subcontrol-origin: margin;
     left: 10px;
-    padding: 0 5px 0 5px;
+    padding: 0 6px;
 }
 
+/* ข้อความ */
 QLabel {
-    font-size: 14px;
     color: #1e3a8a;
+    font-size: 13px;
 }
 
+/* ช่องกรอกข้อมูล */
 QLineEdit {
-    border: 2px solid #60a5fa;
-    border-radius: 6px;
-    padding: 5px;
     background-color: white;
+    border: 2px solid #60a5fa;
+    border-radius: 8px;
+    padding: 6px;
+    color: black;
 }
 
 QLineEdit:focus {
     border: 2px solid #2563eb;
 }
 
+/* ปุ่ม */
 QPushButton {
-    background-color: #3b82f6;
+    background-color: #2563eb;
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 6px;
-    font-size: 13px;
+    font-weight: bold;
 }
 
 QPushButton:hover {
-    background-color: #2563eb;
+    background-color: #3b82f6;
 }
 
 QPushButton:pressed {
     background-color: #1d4ed8;
 }
 
+/* ตาราง */
 QTableWidget {
     background-color: white;
-    border: 1px solid #93c5fd;
-    gridline-color: #bfdbfe;
+    color: black;
+    border: 1px solid #3b82f6;
+    gridline-color: #cbd5e1;
 }
 
-QHeaderView::section {
-    background-color: #3b82f6;
+/* ข้อมูลในตาราง */
+QTableWidget::item {
+    color: black;
+}
+
+/* เวลาเลือกแถว */
+QTableWidget::item:selected {
+    background-color: #2563eb;
     color: white;
-    padding: 5px;
+}
+
+/* หัวตาราง */
+QHeaderView::section {
+    background-color: #2563eb;
+    color: white;
+    padding: 6px;
+    font-weight: bold;
     border: none;
 }</string>
   </property>
@@ -146,6 +166,7 @@ QHeaderView::section {
      <font>
       <family>Nunito</family>
       <pointsize>-1</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -169,6 +190,7 @@ QHeaderView::section {
      <font>
       <family>Nunito</family>
       <pointsize>-1</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -192,6 +214,7 @@ QHeaderView::section {
      <font>
       <family>Nunito</family>
       <pointsize>-1</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -215,6 +238,7 @@ QHeaderView::section {
      <font>
       <family>Nunito</family>
       <pointsize>-1</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -250,7 +274,7 @@ QHeaderView::section {
     <widget class="QPushButton" name="btn_search">
      <property name="geometry">
       <rect>
-       <x>310</x>
+       <x>490</x>
        <y>20</y>
        <width>100</width>
        <height>32</height>
@@ -260,6 +284,7 @@ QHeaderView::section {
       <font>
        <family>Nunito</family>
        <pointsize>-1</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -276,7 +301,7 @@ QHeaderView::section {
     <widget class="QLineEdit" name="txt_search">
      <property name="geometry">
       <rect>
-       <x>420</x>
+       <x>320</x>
        <y>20</y>
        <width>161</width>
        <height>31</height>
